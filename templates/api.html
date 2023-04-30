@@ -1,0 +1,56 @@
+{%extends "base.html"%}
+
+{%block head%}
+    <title>The unofficial CS SKIN API </title>
+{%endblock%}
+
+{%block body%}
+
+    <div class="back">
+        <a href="/">back to index</a>
+    </div>
+    
+    <div class="api_list">
+        <div class="endpoint"> The Endpoint for this API is: localhost:8000</div>
+
+        <div class="list_item">
+            <div class="verb">GET</div>
+            <div class="ending">/api/&#60;skin_name&#62;</div>
+            <div class="usage">retrieve skin Name,price in USD(Field Tested) and skin image for the specific skin. 
+                Example: /api/AK-47_Redline
+            </div>
+        </div>
+        <div class="list_item">
+            <div class="verb">GET</div>
+            <div class="ending">/api/random</div>
+            <div class="usage">retrieve skin info for a random skin. 
+                Example: /api/random </div>
+        </div>
+        <div class="list_item">
+            <div class="verb">GET</div>
+            <div class="ending">/api/randomclass/&#60;class_name&#62;</div>
+            <div class="usage">retrieve skin info for a random skin of a specific class. 
+                Example: /api/randomclass/Pistol</div>
+        </div>
+        <div class="list_item">
+            <div class="verb">GET</div>
+            <div class="ending">/api/random/&#60;weapon_name&#62;</div>
+            <div class="usage">retrieve skin info for a random skin of a specific weapon. 
+                Example: /api/random/SSG-08</div>
+        </div>
+
+        <div class="example">
+            <h2>Output Format</h2>
+            <p>
+            {
+                "name": "AWP | BOOM",
+                "price": "108.01",
+                "img": "https://community.akamai.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FA957PHEcDB9_9W7hIyOqPrxN7LEmyUFu5Eo2LmZ9oj2jAWw-EpkZzyhdY_HIFM9NwmB-wDowLy8jJ7vus-Y1zI97fYk89FL/620fx620f",
+                "weapon": "AWP",
+                "class": "Sniper"
+            }
+            <p>
+        </div>
+        
+    </div>
+{%endblock%}

@@ -1,0 +1,178 @@
+{%extends  "base.html"%}
+
+{%block head%}
+    <title>Random CS Loadout</title>
+{%endblock%}
+
+{%block body%}
+<div class="header">
+    <div class="title">
+        <h1>Random Loadout Generator</h1>
+    </div>
+</div>
+<div class="back">
+    <a href="/">back to index</a>
+</div>
+<div class="flex">
+    <div class="sum">
+        <h2>
+            total: {{formatted_sum}} $
+        </h2>
+    </div>
+</div>
+
+<div class="container">
+    <div class="item_list">
+
+        <div class="item_block rare">
+            <div class="item_img">
+                <img src="{{ knife['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ knife["name"]}}
+                </div>
+                <div class="item_price">
+                    {{knife["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block rare">
+            <div class="item_img" >
+                <img src="{{ gloves['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ gloves["name"]}}
+                </div>
+                <div class="item_price">
+                    {{gloves["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ glock['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ glock["name"]}}
+                </div>
+                <div class="item_price">
+                    {{glock["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ usp['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ usp["name"]}}
+                </div>
+                <div class="item_price">
+                    {{usp["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ deagle['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ deagle["name"]}}
+                </div>
+                <div class="item_price">
+                    {{deagle["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ ump['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ ump["name"]}}
+                </div>
+                <div class="item_price">
+                    {{ump["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ ak47['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ ak47["name"]}}
+                </div>
+                <div class="item_price">
+                    {{ak47["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ m4a1['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ m4a1["name"]}}
+                </div>
+                <div class="item_price">
+                    {{m4a1["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ awp['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ awp["name"]}}
+                </div>
+                <div class="item_price">
+                    {{awp["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        <div class="item_block">
+            <div class="item_img">
+                <img src="{{ scout['img'] }}" alt="" width = "220" height = "220">
+            </div>
+            <div class="item_desc">
+                <div class="item_name">
+                    {{ scout["name"]}}
+                </div>
+                <div class="item_price">
+                    {{scout["price"]}} USD
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+</div>
+
+<div class="flex">
+    <h3 class = "margin-right">Save this loadout</h3>
+    <div class="copytext">
+        <input type="text" value="{{ copy_text}}" size="100">
+    </div>
+</div>
+
+{%endblock%}
